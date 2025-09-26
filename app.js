@@ -9,9 +9,9 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: 'http://127.0.0.1:5500'  // your frontend URL during development
+  origin: "https://travel-frontend-l7vs.onrender.com",
+  credentials: true
 }));
-
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
